@@ -3,13 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet"  href="card.css">
+<!--    <link rel="stylesheet"  href="card.css">-->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            display: flex;
+            margin: 50px 500px;
+        }
+        .container .card{
+            display: inline-block;
+            width: 300px;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            border-radius: 10px;
+            opacity: 0.4; /*透明度*/
+            transition: all 0.5s;
+        }
+
+        .container .card:hover{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0
+            , 0, 0, 0.19);/*阴影*/
+            opacity: 1;
+        }
+
+        .container .card .header img{
+            border-radius:50%;
+        }
+
+        .container .card .content{
+            padding: 20px;
+        }
+
+        p{
+            margin-bottom: 10px;
+        }
+
+        a{
+            display: inline-block;
+            color: white;
+            font-size: 18px;
+            background: rgb(16, 168, 16);
+            height: 30px;
+            width: 120px;
+            text-decoration: none;
+            border-radius: 8px;
+            padding: 3px;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
     <div class="card">
         <div class="header">
-            <img src="https://picsum.photos/250?random=1" alt="face" class="img">
+            <img src="https://picsum.photos/250?random=1" alt="face">
         </div>
         <div class="content">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dicta ex laudantium ratione sint.
@@ -21,7 +72,7 @@
 
     <div class="card">
         <div class="header">
-            <img src="https://picsum.photos/250?random=2" alt="face" class="img">
+            <img src="https://picsum.photos/250?random=2" alt="face">
         </div>
         <div class="content">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dicta ex laudantium ratione sint.
@@ -32,7 +83,7 @@
     </div>
     <div class="card">
         <div class="header">
-            <img src="https://picsum.photos/250?random=3" alt="face" class="img">
+            <img src="https://picsum.photos/250?random=3" alt="face">
         </div>
         <div class="content">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dicta ex laudantium ratione sint.

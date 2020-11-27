@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="form.css" rel="stylesheet" type="text/css"/>
+<!--    <link href="form.css" rel="stylesheet" type="text/css"/>-->
     <style>
         * {
             padding: 0;
@@ -17,7 +17,49 @@
             width: 800px;
             padding: 15px;
         }
+        body{
+            padding-top: 50px;
+            padding-left: 28%;
+        }
+        .form-group{
+            display: flex;
+            margin-top: 10px;
+            padding-left: 80px;
+        }
 
+        .form-label{
+            width: 50px;
+            height: 30px;
+            text-align: right;
+        }
+
+        .form-input{
+            flex: 1;
+            display: flex;
+            padding-left: 10px;
+        }
+
+        .form-input input{
+            outline-style: none;
+            height: 30px;
+            flex: 1;
+            border: 2px solid rgb(206, 194, 194);
+            border-radius: 6px;
+            border-style: inset;
+        }
+
+        .form-input input:focus{
+            border: 2px solid red;
+        }
+
+        .form-input [type="radio"]{
+            height: 18px;
+            flex: 0;
+            margin: 4px;
+        }
+        p{
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -26,22 +68,22 @@
         <div class="form-group">
             <label class="form-label">用户名</label>
             <div class="form-input">
-                <input class="input" placeholder=" 请输入用户名">
+                <input placeholder=" 请输入用户名">
             </div>
         </div>
 
         <div class="form-group">
             <label class="form-label">密码</label>
             <div class="form-input">
-                <input class="input" placeholder=" 请输入密码">
+                <input placeholder=" 请输入密码">
             </div>
         </div>
 
         <div class="form-group">
             <label class="form-label">性别</label>
             <div class="form-input">
-                <input type="radio" name="sex" class="radio">男
-                <input type="radio" name="sex" class="radio">女
+                <input type="radio" name="sex">男
+                <input type="radio" name="sex">女
             </div>
         </div>
     </form>

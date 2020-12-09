@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Material Icon fixed</title>
+    <link href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 100%;
+            height: auto;
+            display: flex;
+        }
+        .nav{
+            width: 150px;
+            height: 100%;
+            background: rgb(44, 6, 218);
+            position: fixed;/*固定侧边栏*/
+        }
+        .icon{
+            width: 100%;
+            height: 120px;
+        }
+        .icon .item{
+            width: 100%;
+            height: 120px;
+            display: flex;
+            justify-content: center;/*水平居中*/
+            text-decoration: none; /*下划线*/ 
+        }
+        .icon .item .material-icons{
+            font-size: 70px;
+            color: white;
+            /* align-self: center;垂直居中 */
+            margin-top: 30px;
+            transition: all 0.25s;
+        }
+        .icon .item .material-icons:hover{
+            margin-top: 20px;
+            transform: scale(1.1,1.1);/*放大倍数*/
+        }
+        .content{
+            background: rgb(255, 226, 243);
+            margin-left: 150px;
+            padding: 10px;
+        }
+        p{
+            font-size: 50px;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="nav"><!--侧边栏-->
+            <div class="icon">
+                <a href="#" class="item">
+                    <i class="material-icons">access_alarm</i>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="#" class="item">
+                    <i class="material-icons">ac_unit</i>           
+                </a>
+            </div>
+            <div class="icon">
+                <a href="#" class="item">
+                    <i class="material-icons">airplay</i> 
+                </a>           
+            </div>
+            <div class="icon">
+                <a href="#" class="item">
+                    <i class="material-icons">language</i>
+                </a>           
+            </div>
+        </div>
+        <div class="content"><!--内容部分-->
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi, ut ipsa. Placeat, ducimus cum totam neque quo,
+                 quidem sed fuga nam pariatur mollitia eius. Saepe nam labore, adipisci modi quae earum accusantium sed incidunt 
+                 assumenda aliquid, ratione excepturi corporis facilis officia magnam dignissimos quam fuga natus ab perspiciatis 
+                 ea ducimus illo eos! Sit consequuntur tempora maxime blanditiis eum sequi id, voluptatum quae nobis veniam 
+                 corrupti error iste eveniet itaque at voluptas delectus, quod ipsam odit libero excepturi recusandae voluptate? 
+                 Quo iste aperiam, natus voluptates repellendus alias sunt eaque ea explicabo facere reiciendis hic possimus quod 
+                 totam eum, provident earum numquam. Dolorem perferendis, nam minima ratione similique voluptatibus corporis autem 
+                 recusandae voluptas dolorum quae culpa itaque vitae veniam. Expedita quibusdam animi vel saepe cum optio maxime 
+                 tempora voluptatem, inventore reprehenderit totam temporibus quia ipsa? Id impedit ipsa incidunt nostrum facilis 
+                 nemo exercitationem neque, laudantium inventore, ab culpa facere quam illum, ipsum commodi perferendis hic eum quae 
+                 omnis quibusdam voluptatum. Quos a cumque excepturi suscipit repellendus quam animi quaerat atque reiciendis pariatur 
+                 sapiente quae culpa molestias reprehenderit omnis quibusdam aut, veniam ex aliquam ut natus. Quo voluptas, dicta vero 
+                 dolorem voluptatibus asperiores nisi corporis laboriosam provident mollitia eum eligendi doloribus molestias ipsa.</p>
+        </div>
+    </div>
+</body>
+</html>

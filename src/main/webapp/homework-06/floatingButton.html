@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>floatingButton</title>
+    <link href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(159, 192, 255);
+        }
+        .fab{
+            background-color:rgb(255, 223, 250);
+            width: 200px;
+            height: 100vh;
+            text-align: center;
+            position: fixed;
+        }
+        .fab-btn{
+            width: 100%;
+        }
+        .fab-btn .material-icons{
+            font-size: 80px;
+            margin-top: 30px;
+            transition: all 0.5s;
+        }
+        .fab-btn .material-icons:hover{
+            transform: rotate(180deg);
+        }
+        .fab-menu{
+            display: none;
+        }
+        a{
+            width: 100%;
+            text-decoration: none;
+        }
+        a .material-icons{
+            font-size: 40px;
+            color: rgb(77, 169, 255);
+            width: 100%;
+            padding-top: 10px;
+        }
+        .material-icons[type="del"]{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <nav class="fab">
+        <div class="fab-btn"><a href="#"><i class="material-icons">account_circle</i></a></div>
+        <div class="fab-menu">
+            <a href="#"><i class="material-icons">brush</i></a>
+            <a href="#"><i class="material-icons">create</i></a>
+            <a href="#"><i class="material-icons" type="del">delete_forever</i></a>
+        </div>
+    </nav>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(".fab-btn , .fab-menu").hover(() => {
+            $(".fab-btn a i").text("cancel");
+            // $(".fab-btn").rotate(180);
+            $(".fab-menu").fadeIn(500);
+        },function(){
+            $(".fab-btn a i").text("account_circle");
+            $(".fab-menu").fadeOut(500);
+        })
+    </script>
+</body>
+</html>

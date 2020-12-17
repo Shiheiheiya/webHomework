@@ -29,9 +29,6 @@
             margin-top: 30px;
             transition: all 0.5s;
         }
-        .fab-btn .material-icons:hover{
-            transform: rotate(180deg);
-        }
         .fab-menu{
             display: none;
         }
@@ -66,9 +63,11 @@
     <script>
         $(".fab").hover(() => {
             $(".fab-btn a i").text("cancel");
+            $('.fab-btn .material-icons').css("transform","rotate(180deg)");
             $(".fab-menu").fadeIn(500);
         },function(){
             $(".fab-btn a i").text("account_circle");
+            $('.fab-btn .material-icons').css("transform","rotate(0deg)");
             $(".fab-menu").fadeOut(500);
         })
     </script>

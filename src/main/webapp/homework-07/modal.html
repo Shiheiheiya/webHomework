@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Modal模态框</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            padding: 10px 20px;
+        }
+        .content{
+            margin-bottom: 10px;
+        }
+        .modal{
+            position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,0.4);
+			z-index: 100;
+			display: none;
+        }
+        .modal-dialog{
+            border: 1px solid gray;
+            width: 400px;
+            height: 200px;
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            margin-left: -200px;/*补width的一半*/
+            background-color:white;
+            padding: 10px 0px 20px 20px;
+            border-radius: 10px;
+        }
+        .modal-header{
+            display: flex;
+        }
+        .btn{
+            min-width: 90px;
+            height: 40px;
+            font-size: 16px;
+            padding: 0 10px;
+            outline-style: none;
+            border-radius: 8px;
+            opacity: 0.8;
+            border: none;
+            margin: 0px 5px;
+            cursor: pointer;
+        }
+        .btn:hover{
+            opacity: 1;
+        }
+        .btn-close{
+            width: 40px;
+            height: 30px;
+            margin-left: auto;
+            font-size: 30px;
+            color: gray;
+            background-color: white;
+            border: none;
+            outline-style: none;
+        }
+        .btn-close:hover{
+            color: black;
+            cursor: pointer; /*变小手*/
+            /* border-radius: 5px;
+            border: 2px solid gray; */
+        }
+        .btn-cancel{
+            background-color: gray;
+            color: white;
+            margin-left: 170px;
+        }
+        .btn-confirm{
+            background-color:#0004ff;
+            color: white;
+        }
+        .btn-common{
+            background-color:#0004ff;
+            color: white;
+        }
+        .modal-body{
+            width: 360px;
+            height: 80px;
+            padding-top: 20px;
+            font-size: 20px;
+            margin: 10px 0;
+            border-top: 1px solid rgb(201, 200, 200);
+            border-bottom: 1px solid rgb(201, 200, 200);
+        }
+    </style>
+</head>
+<body>
+    <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, magnam minima! Quidem, dolores fuga? Voluptas corporis 
+        odio veniam unde nulla dolor! Nemo quaerat dolores quas placeat rerum, earum sequi veniam?</p>
+
+    <!-- test butten -->
+    <button type="button" class="btn btn-common">Modal模态框测试</button>
+    <!-- Modal -->
+    <div class="modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="exampleModalLabel">Modal模态框测试</h2>
+                    <button type="button" class="btn-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    This is a modal test !
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-confirm">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(".btn-common").click(()=>{
+            $(".modal").fadeIn(100);
+        })
+        $(".btn-close,.btn-cancel,.btn-confirm").click(()=>{
+            $(".modal").fadeOut(100);
+        })
+        $(".modal").click(()=>{
+            $(".modal").hide();
+        })
+        $(".modal-dialog").click(false);//阻止modal上的冒泡传递机制
+    </script>
+</body>
+</html>
